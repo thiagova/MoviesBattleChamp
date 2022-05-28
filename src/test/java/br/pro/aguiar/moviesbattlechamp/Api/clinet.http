@@ -2,4 +2,31 @@ POST http://localhost:8080/oauth/token
 Content-Type: application/x-www-form-urlencoded
 Authorization: Basic client-id-test:client-id-secret
 
-grant_type=password&username=user&password=password
+grant_type=password&username=user1&password=password
+
+###
+
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/api/admin/users
+Authorization: Bearer 3dbde7f3-d8c9-4a7e-835b-f2dafa227e8b
+
+###
+
+GET http://localhost:8080/api/admin/users/2
+Authorization: Bearer 3dbde7f3-d8c9-4a7e-835b-f2dafa227e8b
+
+###
+
+POST http://localhost:8080/api/admin/users
+Authorization: Bearer 3dbde7f3-d8c9-4a7e-835b-f2dafa227e8b
+Content-Type: application/json
+
+{
+    "username": "thiagoaguiar",
+    "name": "Thiago Aguiar",
+    "email": "thi@go.pro.br",
+    "password": "password"
+}
