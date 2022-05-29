@@ -10,8 +10,23 @@ GET http://localhost:8080/
 
 ###
 
+GET http://localhost:8080/api/turns
+Authorization: Bearer 729867ca-73b4-4a33-ad52-e28ed3e35444
+
+###
+POST http://localhost:8080/api/turns
+Authorization: Bearer caf0573e-0507-44a9-b81a-02d1fed02687
+Content-Type: application/json
+
+{
+    "firstMovie": "tt0000001",
+    "secondMovie": "tt0083658"
+}
+
+###
+
 GET http://localhost:8080/api/game/next_turn
-Authorization: Bearer 9aef06ff-51c4-4b11-9ce3-79289ad22094
+Authorization: Bearer caf0573e-0507-44a9-b81a-02d1fed02687
 
 ###
 
@@ -27,16 +42,16 @@ Authorization: Bearer 3dbde7f3-d8c9-4a7e-835b-f2dafa227e8b
 
 
 GET http://localhost:8080/api/movies/tt0000001
-Authorization: Bearer f93ccb78-9364-4677-92d3-44348c67353f
+Authorization: Bearer caf0573e-0507-44a9-b81a-02d1fed02687
 ###
 
 GET http://localhost:8080/api/movies/tt1773696
-Authorization: Bearer 2471fdb1-4442-4c99-aba2-d5f90401c579
+Authorization: Bearer caf0573e-0507-44a9-b81a-02d1fed02687
 
 ###
 
 GET http://localhost:8080/api/movies/tt0083658
-Authorization: Bearer 2471fdb1-4442-4c99-aba2-d5f90401c579
+Authorization: Bearer caf0573e-0507-44a9-b81a-02d1fed02687
 
 ###
 

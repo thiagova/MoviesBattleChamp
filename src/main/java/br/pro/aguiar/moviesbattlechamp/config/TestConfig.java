@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import br.pro.aguiar.moviesbattlechamp.models.User;
 import br.pro.aguiar.moviesbattlechamp.services.UserService;
@@ -18,7 +17,6 @@ public class TestConfig implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         userService.save(
                 new User(
                         "user 1",

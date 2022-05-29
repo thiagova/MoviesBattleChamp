@@ -9,6 +9,7 @@ public class Movie {
     @SerializedName("imdbRating") private String imdbRating; // [float]
     @SerializedName("imdbVotes") private String imdbVotes; // [int] 
     @SerializedName("imdbID") private String imdbID; 
+    @SerializedName("Type") private String type;
 
     // String Rated
     // String Released
@@ -24,7 +25,6 @@ public class Movie {
     // String Poster
     // List<Rating> Ratings
     // String Metascore
-    // String Type
     // String DVD
     // String BoxOffice
     // String Production
@@ -32,6 +32,14 @@ public class Movie {
     // boolean Response
 
     Movie(){}
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 
     public String getImdbID() {
         return imdbID;
@@ -73,6 +81,16 @@ public class Movie {
         this.title = title;
     }
 
-    
+    public float getPoints() {
+        String rating = this.getImdbRating();
+        float ratingFloat = 0;
+        String votes = this.getImdbVotes();
+        int votesInt = 0;
+        if (rating != null && rating.compareTo("N/A") != 0)
+            ratingFloat = Float.parseFloat(rating);
+        if (votes != null && votes.compareTo("N/A") != 0)
+            votesInt = Integer.parseInt(votes.replace(",",""));
+        return ratingFloat * votesInt;
+    }
     
 }

@@ -2,8 +2,6 @@ package br.pro.aguiar.moviesbattlechamp.services;
 
 import java.io.IOException;
 
-import org.springframework.beans.factory.annotation.Value;
-
 import br.pro.aguiar.moviesbattlechamp.models.Movie;
 import br.pro.aguiar.moviesbattlechamp.repositories.MovieRepository;
 import retrofit2.Response;
