@@ -19,7 +19,7 @@ public class SecurityConfiguration {
         return (web) -> 
             web
                 .ignoring()
-                .antMatchers("/h2-console/**", "/", "/docs/**", "/swagger-ui/**");
+                .antMatchers("/h2-console/**", "/", "/docs/**", "/swagger-ui/**", "/swagger-ui.html/**");
     }
 
     @Bean public PasswordEncoder passwordEncoder() {
